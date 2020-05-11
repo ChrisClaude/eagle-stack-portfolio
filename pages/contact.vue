@@ -6,7 +6,19 @@
 
 <script>
     export default {
-        name: "contact"
+      data () {
+        return {
+          title: "C. Chris | Contact"
+        }
+      },
+      head() {
+        return {
+          title: this.title,
+          meta: [
+            {hid: 'description', name: 'description', content: 'Claude Christ De-Tchambila Portfolio'}
+          ]
+        }
+      }
     }
 </script>
 

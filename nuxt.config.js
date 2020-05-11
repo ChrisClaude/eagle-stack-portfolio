@@ -81,5 +81,10 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+
+  env: {
+    githubClientId: process.env.GITHUB_CLIENT_ID || 'clientest',
+    githubClientSecret: process.env.GITHUB_CLIENT_SECRET || 'secret'
   }
 }

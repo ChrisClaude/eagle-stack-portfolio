@@ -17,3 +17,21 @@
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        title: "C. Chris | Skills"
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          {hid: 'description', name: 'description', content: 'Claude Christ De-Tchambila Portfolio'}
+        ]
+      }
+    }
+  }
+</script>
