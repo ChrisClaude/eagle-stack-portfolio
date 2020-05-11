@@ -92,7 +92,7 @@
               <v-row class="pl-6" justify="center">
                 <v-col cols="4">
                   <v-row class="display-1 white--text">
-                    Be amazed my work
+                    Be amazed by my work
                   </v-row>
                   <v-row class="mt-3">
                     <v-btn class="primary">Explore</v-btn>
@@ -114,6 +114,7 @@
       </v-carousel-item>
     </v-carousel>
 
+    <!--  The Stack used  -->
     <v-container>
       <v-row>
         <v-col cols="12" height="270">
@@ -124,7 +125,12 @@
         </v-col>
         <v-col cols="4">
           <v-card>
-            <v-img src="/webdevelopment.jpg" class="white--text" height="270px">
+            <v-img
+              src="/webdevelopment.jpg"
+              class="white--text"
+              height="270px"
+              lazy-src="https://picsum.photos/10/6?image=10"
+            >
               <template v-slot:placeholder>
                 <v-row
                   class="fill-height ma-0"
@@ -152,7 +158,7 @@
           <v-card>
             <v-img
               src="/desktopdev.jpg"
-              lazy-src="https://i.picsum.photos/id/0/200/200.jpg"
+              lazy-src="https://picsum.photos/10/6?image=10"
               class="white--text" height="270px">
               <template v-slot:placeholder>
                 <v-row
@@ -179,7 +185,7 @@
             <v-container>
               <v-img
                 src="/apple-ios.svg"
-                lazy-src="https://i.picsum.photos/id/0/200/200.jpg"
+                lazy-src="https://picsum.photos/10/6?image=10"
               >
                 <template v-slot:placeholder>
                   <v-row
@@ -208,7 +214,7 @@
             <v-container>
               <v-img
                 src="/android-5.svg"
-                lazy-src="https://i.picsum.photos/id/0/200/200.jpg"
+                lazy-src="https://picsum.photos/10/6?image=10"
               >
                 <template v-slot:placeholder>
                   <v-row
@@ -325,7 +331,7 @@
       </v-container>
     </v-container>
 
-  <!--  Social Media Section  -->
+    <!--  Social Media Section  -->
     <v-container>
       <v-row class="mb-3">
         <v-col cols="12">
@@ -333,9 +339,9 @@
         </v-col>
       </v-row>
       <v-row>
-      <!--  LinkedIn  -->
+        <!--  LinkedIn  -->
         <v-col cols="3">
-          <v-card >
+          <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.linkedin.com/in/claude-de-tchambila-a720ba143/" target="_blank">
                 <v-card color="#0077B5" class="icon-pos">
@@ -346,8 +352,9 @@
               </a>
             </v-card-title>
             <v-card-text>
-              <v-divider class="my-3" ></v-divider>
-              <v-icon>mdi-clock</v-icon>Tracked From LinkedIn
+              <v-divider class="my-3"></v-divider>
+              <v-icon>mdi-transfer-up</v-icon>
+              Contact me on LinkedIn
             </v-card-text>
           </v-card>
         </v-col>
@@ -364,8 +371,9 @@
               </a>
             </v-card-title>
             <v-card-text>
-              <v-divider class="my-3" ></v-divider>
-              <v-icon>mdi-clock</v-icon>Tracked From Github
+              <v-divider class="my-3"></v-divider>
+              <v-icon>mdi-transfer-up</v-icon>
+              Follow me on Github
             </v-card-text>
           </v-card>
         </v-col>
@@ -382,8 +390,9 @@
               </a>
             </v-card-title>
             <v-card-text>
-              <v-divider class="my-3" ></v-divider>
-              <v-icon>mdi-clock</v-icon>Tracked From Twitter
+              <v-divider class="my-3"></v-divider>
+              <v-icon>mdi-transfer-up</v-icon>
+              Follow me on Twitter
             </v-card-text>
           </v-card>
         </v-col>
@@ -400,19 +409,20 @@
               </a>
             </v-card-title>
             <v-card-text>
-              <v-divider class="my-3" ></v-divider>
-              <v-icon>mdi-clock</v-icon>Tracked From Instagram
+              <v-divider class="my-3"></v-divider>
+              <v-icon>mdi-transfer-up</v-icon>
+              Follow me on Instagram
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
     </v-container>
 
-<!--    Latest Development Activities on Github  -->
+    <!--    Latest Development Activities on Github  -->
     <v-container>
       <v-row>
         <v-col cols="12">
-          <h2>Latest Github Activities</h2>
+          <h2 id="github_activities">Latest Github Activities</h2>
         </v-col>
         <v-col cols="8">
           <v-card>
@@ -421,30 +431,51 @@
                 <v-img :src="githubData.avatar_url"></v-img>
               </v-avatar>
               <div class="ml-4 subtitle-1">
-                <div class="mb-1">Username: <v-chip color="primary">
-                  <v-icon class="mr-1">mdi-account-outline</v-icon>
-                  {{githubData.login}}</v-chip>
+                <div class="mb-1">Username:
+                  <v-chip color="primary">
+                    <v-icon class="mr-1">mdi-account-outline</v-icon>
+                    {{githubData.login}}
+                  </v-chip>
                 </div>
-                <div class="mb-1">Location: <v-chip color="info"><v-icon class="mr-1" left>mdi-map-marker</v-icon>{{githubData.location}}</v-chip></div>
-                <div class="mb-1">Hireable: <v-chip color="success"><v-icon class="mr-1">{{githubData.hireable? "mdi-account-check" : "mdi-account-off"}}</v-icon>{{githubData.hireable? "Yes" : "No"}}</v-chip></div>
+                <div class="mb-1">Location:
+                  <v-chip color="info">
+                    <v-icon class="mr-1">mdi-map-marker</v-icon>
+                    {{githubData.location}}
+                  </v-chip>
+                </div>
+                <div class="mb-1">Hireable:
+                  <v-chip color="success">
+                    <v-icon class="mr-1">{{githubData.hireable? "mdi-account-check" : "mdi-account-off"}}</v-icon>
+                    {{githubData.hireable? "Yes" : "No"}}
+                  </v-chip>
+                </div>
               </div>
             </v-card-title>
             <v-card-text>
-              <div v-if="githubEventData.length > 0" v-for=" x in 3">
-                <div>
-                  Type: {{githubEventData[x-1].type}}
-                </div>
-                <div>
-                  Actor: {{githubEventData[x-1].actor.login}}
-                </div>
-                <div>
-                  Url: <a :href="githubEventData[x-1].repo.url">{{githubEventData[x].repo.name}}</a>
-                </div>
-                <div v-if="githubEventData[x-1].payload.commits">
-                  Commit message: {{githubEventData[x-1].payload.commits[0].message}}
-                </div>
-                <v-divider class="mb-3 mt-1"></v-divider>
-              </div>
+              <v-row v-if="githubEventData.length > 0">
+                <v-col cols="12" v-for="x in 3" key="x">
+                  <div>
+                    Type: {{githubEventData[x-1].type}}
+                  </div>
+                  <div>
+                    Actor: {{githubEventData[x-1].actor.login}}
+                  </div>
+                  <div>
+                    Url: <a :href="githubEventData[x-1].repo.url">{{githubEventData[x].repo.name}}</a>
+                  </div>
+                  <div v-if="githubEventData[x-1].payload.commits">
+                    Commit message: {{githubEventData[x-1].payload.commits[0].message}}
+                  </div>
+                  <div>
+                    Created at: {{new Date(githubEventData[x].created_at)}}
+                  </div>
+                  <v-divider class="mt-1"></v-divider>
+                </v-col>
+                <v-col cols="6">
+                  <v-icon>mdi-clock</v-icon>
+                  Tracked From Github
+                </v-col>
+              </v-row>
               <div v-show="githubEventData.length === 0">
                 No activities recorded
               </div>
@@ -469,10 +500,12 @@
       }
     },
     async created() {
-      const res = await axios.get("https://api.github.com/users/chclaude")
-      .catch(error => console.log(error));
+      const res = await axios.get(`https://api.github.com/users/chclaude?client_id=${process.env.GITHUB_CLIENT_ID}
+      &client_secret=${process.env.GITHUB_CLIENT_SECRET}`)
+        .catch(error => console.log(error));
 
-      const resEvent = await axios.get("https://api.github.com/users/ChClaude/events")
+      const resEvent = await axios.get(`https://api.github.com/users/ChClaude/events?client_id=${process.env.GITHUB_CLIENT_ID}
+      &client_secret=${process.env.GITHUB_CLIENT_SECRET}`)
         .catch(error => console.log(error));
 
       if (res !== undefined && resEvent !== undefined) {
@@ -480,9 +513,9 @@
         this.githubEventData = resEvent.data;
       }
 
-      console.log("Login");
-      console.log(process.env.githubClientId);
-      console.log(process.env.githubClientSecret);
+      // console.log("Login");
+      // console.log(process.env.githubClientId);
+      // console.log(process.env.githubClientSecret);
     },
     head() {
       return {

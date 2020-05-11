@@ -9,7 +9,20 @@
     >
       <div class="my-2 mr-4" :class="`d-flex justify-center`">
         <v-avatar size="85">
-          <v-img src="/mypic.jpeg"></v-img>
+          <v-img
+            src="/mypic.jpeg"
+            lazy-src="https://picsum.photos/10/6?image=10"
+          >
+            <template v-slot:placeholder>
+              <v-row
+                class="fill-height ma-0"
+                align="center"
+                justify="center"
+              >
+                <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
         </v-avatar>
       </div>
       <v-list>

@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "1.0.0",
-  "description": "This is my portfolio app, it has alsmost all of my greatest achievements (work) to showcase",
+  "description": "This is my portfolio app, it has almost all of my greatest achievements (work) to showcase",
   "author": "CChris",
   "private": true,
   "scripts": {

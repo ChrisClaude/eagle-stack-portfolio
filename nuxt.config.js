@@ -64,10 +64,10 @@ export default {
           primary: "#fc4364",
           accent: "#eee",
           secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
+          info: "#2096f4",
           warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          error: "#ff5151",
+          success: "#4caf50"
         }
       }
     }
@@ -84,7 +84,7 @@ export default {
   },
 
   env: {
-    githubClientId: process.env.GITHUB_CLIENT_ID || 'clientest',
-    githubClientSecret: process.env.GITHUB_CLIENT_SECRET || 'secret'
+    githubClientId: process.env.GITHUB_CLIENT_ID || '81e6496c5049e19eaf13',
+    githubClientSecret: process.env.GITHUB_CLIENT_SECRET || 'b6bd97d12a5994896b0ad88eee315ba599e7a7b4'
   }
 }
