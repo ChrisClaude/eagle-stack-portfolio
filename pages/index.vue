@@ -15,20 +15,12 @@
       <v-carousel-item>
         <v-row
           class="fill-height"
-          align="center"
-          justify="center"
         >
           <v-img
             src="/city_entreprise.jpg"
             lazy-src="/city_entreprise.jpg"
             class="d-flex justify-end align-center">
-            <v-container class="white--text" style="position: relative; top: -110px;">
-              <v-row class="pl-6">
-                <v-col cols="12 ">
-                  <div class="display-3 white--text">Welcome <br/>to Chris Software development World</div>
-                </v-col>
-              </v-row>
-            </v-container>
+                  <div class="display-3 white--text d-flex justify-center pl-5">Welcome <br/>to Chris Software development World</div>
           </v-img>
           <template v-slot:placeholder>
             <v-row
@@ -41,30 +33,25 @@
           </template>
         </v-row>
       </v-carousel-item>
-
       <!--   Second First   -->
       <v-carousel-item>
         <v-row
-          class="fill-height pr-12"
+          class="fill-height"
         >
           <v-img
             src="/software_dev.jpg"
             lazy-src="/city_entreprise.jpg"
             class="d-flex justify-end align-center">
-            <v-container class="white--text pr-8 rt-80">
-              <v-row justify="end" class="pr-10">
-                <v-col cols="12 text-right">
-                  <blockquote class="blockquote">
-                    Want to hire me or collaborate?
-                  </blockquote>
-                </v-col>
-                <v-col cols="2" style="position: relative; top: -20px;">
-                  <v-btn class="primary">
-                    Contact me
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
+            <div class="white--text pr-6" style="display: grid; grid-template-columns: auto;">
+              <blockquote class="blockquote" style="text-align: right;">
+                Want to hire me or collaborate?
+              </blockquote>
+              <div>
+                <v-btn class="primary" style="float: right;">
+                  Contact me
+                </v-btn>
+              </div>
+            </div>
           </v-img>
           <template v-slot:placeholder>
             <v-row
@@ -124,7 +111,7 @@
             mdi-chevron-right
           </v-icon>
         </v-col>
-        <v-col v-for="service in services" cols="4" :key="service.id">
+        <v-col v-for="service in services" sm="12" md="4" :key="service.id">
           <v-card class="card-services-height">
             <v-img
               :src="service.image"
@@ -169,7 +156,7 @@
         </v-row>
 
         <v-row>
-          <v-col v-for="stack in stacks" cols="3" :key="stack.id">
+          <v-col v-for="stack in stacks" sm="12" md="3" :key="stack.id">
             <v-card class="card-height">
               <v-container class="card-img">
                 <v-img :src="stack.image"></v-img>
@@ -196,14 +183,14 @@
 
     <!--  Social Media Section  -->
     <v-container>
-      <v-row class="mb-3">
+      <v-row>
         <v-col cols="12">
           <h2>Social Media</h2>
         </v-col>
       </v-row>
       <v-row>
         <!--  LinkedIn  -->
-        <v-col cols="3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.linkedin.com/in/claude-de-tchambila-a720ba143/" target="_blank">
@@ -222,7 +209,7 @@
           </v-card>
         </v-col>
         <!--  Github  -->
-        <v-col cols="3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://github.com/ChCLaude" target="_blank">
@@ -241,7 +228,7 @@
           </v-card>
         </v-col>
         <!--  Twitter  -->
-        <v-col cols="3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://twitter.com/ClaudeChrist_DT" target="_blank">
@@ -260,7 +247,7 @@
           </v-card>
         </v-col>
         <!--  Instagram  -->
-        <v-col cols="3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.instagram.com/christ_tchambila/" target="_blank">
@@ -287,7 +274,7 @@
         <v-col cols="12">
           <h2 id="github_activities">Latest Github Activities</h2>
         </v-col>
-        <v-col cols="8">
+        <v-col sm="12" md="8">
           <v-card>
             <v-card-title>
               <v-avatar color="orange" size="62">
@@ -334,7 +321,7 @@
                   </div>
                   <v-divider class="mt-1"></v-divider>
                 </v-col>
-                <v-col cols="6">
+                <v-col sm="12" md="6">
                   <v-icon>mdi-clock</v-icon>
                   Tracked From Github
                 </v-col>

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="4" v-for="(project, x) in projects" :key="x">
+      <v-col sm="12" md="4" v-for="(project, x) in projects" :key="x">
 
         <v-card height="380px">
           <v-img
@@ -26,23 +26,25 @@
             {{project.text}}
           </v-card-text>
           <v-card-actions>
-            <a :href="project.link" class="mr-4" target="_blank">
-              <v-btn color="primary">
-                Visit Site
-              </v-btn>
-            </a>
-            <a :href=project.repo>
-              <v-btn color="secondary">
-                Project Repo
-              </v-btn>
-            </a>
+            <v-responsive>
+              <a :href="project.link" class="mr-4" target="_blank">
+                <v-btn color="primary">
+                  Visit Site
+                </v-btn>
+              </a>
+              <a :href="project.repo">
+                <v-btn color="secondary">
+                  Project Repo
+                </v-btn>
+              </a>
+            </v-responsive>
           </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
 
     <v-row>
-      <v-col cols="5">
+      <v-col md="6" sm="8">
         <v-card>
           <v-card-text>
             <v-icon>mdi-alert</v-icon>
@@ -75,7 +77,7 @@
             repo: "https://github.com/ChClaude/github-finder-m"
           },
           {
-            title: "Eagle Stack - Portfolio Site",
+            title: "EagleStack",
             text: "This is my portfolio site - I named it Eagle Stack",
             image: "/projects/eagle_stack.png",
             link: "https://cchris.netlify.app",

@@ -2,7 +2,8 @@
   <v-container class="fill-height" fluid>
     <v-row>
       <v-col
-        cols="8"
+        md="8"
+        sm="12"
       >
         <v-hover
           v-slot:default="{ hover }"
