@@ -183,7 +183,7 @@
 
     <!--  Social Media Section  -->
     <v-container>
-      <v-row>
+      <v-row class="mb-2">
         <v-col cols="12">
           <h2>Social Media</h2>
         </v-col>
@@ -509,6 +509,10 @@
 
     .card-stack-height {
       height: 490px;
+    }
+
+    .icon-pos {
+      top: -27px;
     }
   }
 </style>
