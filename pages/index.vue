@@ -114,8 +114,9 @@
       </v-carousel-item>
     </v-carousel>
 
-    <!--  The Stack used  -->
+    <!-- Services and Stacks -->
     <v-container>
+      <!--  Services offered  -->
       <v-row>
         <v-col cols="12" height="270">
           <span>Services</span>
@@ -123,12 +124,11 @@
             mdi-chevron-right
           </v-icon>
         </v-col>
-        <v-col cols="4">
-          <v-card>
+        <v-col v-for="service in services" cols="4" :key="service.id">
+          <v-card class="card-services-height">
             <v-img
-              src="/webdevelopment.jpg"
-              class="white--text"
-              height="270px"
+              :src="service.image"
+              class="white--text card-services-img"
               lazy-src="https://picsum.photos/10/6?image=10"
             >
               <template v-slot:placeholder>
@@ -141,107 +141,25 @@
                 </v-row>
               </template>
             </v-img>
-            <v-card-text>
+            <v-card-title>
+              {{service.title}}
+            </v-card-title>
+            <v-card-text class="card-services-text">
               <div>
-                <b>Web Development</b>, be amazed with what we have to offer.
-                End to end solution, we take your business from an idea to a real app in production.
+                {{service.text}}
               </div>
             </v-card-text>
             <v-card-actions>
-              <v-btn>
-                Contact
+              <v-btn to="/contact" color="primary">
+                Start
               </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
-        <v-col cols="4">
-          <v-card>
-            <v-img
-              src="/desktopdev.jpg"
-              lazy-src="https://picsum.photos/10/6?image=10"
-              class="white--text" height="270px">
-              <template v-slot:placeholder>
-                <v-row
-                  class="fill-height ma-0"
-                  align="center"
-                  justify="center"
-                >
-                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
-            <v-card-text>
-              <b>Desktop development</b>, we build the desktop apps your business needs.
-            </v-card-text>
-            <v-card-actions>
-              <v-btn>
-                Contact
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col cols="4">
-          <v-card>
-            <v-container>
-              <v-img
-                src="/apple-ios.svg"
-                lazy-src="https://picsum.photos/10/6?image=10"
-              >
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-            </v-container>
-            <v-card-text>
-              <div><b>iOS development</b>, robust and scalable.</div>
-              <div>We prototype beforehand, you either like it or you don't owe us.</div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn>
-                Contact
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col cols="4">
-          <v-card>
-            <v-container>
-              <v-img
-                src="/android-5.svg"
-                lazy-src="https://picsum.photos/10/6?image=10"
-              >
-                <template v-slot:placeholder>
-                  <v-row
-                    class="fill-height ma-0"
-                    align="center"
-                    justify="center"
-                  >
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                  </v-row>
-                </template>
-              </v-img>
-            </v-container>
-            <v-card-text>
-              <div>We build <b>native android applications</b> for mobiles</div>
-              <div>Build your android solution with us.</div>
-              <div>We prototype, you either like or you don't pay.</div>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn>
-                Contact
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
+
       </v-row>
 
-
+      <!--   Stack used   -->
       <v-container>
         <v-row class="mb-2">
           <v-col cols="12">
@@ -251,17 +169,18 @@
         </v-row>
 
         <v-row>
-          <v-col cols="3">
-            <v-card class="height-430">
-              <v-container>
-                <v-img src="laravel-2.svg"></v-img>
+          <v-col v-for="stack in stacks" cols="3" :key="stack.id">
+            <v-card class="card-height">
+              <v-container class="card-img">
+                <v-img :src="stack.image"></v-img>
               </v-container>
-              <v-card-subtitle class="pb-0">Laravel</v-card-subtitle>
-              <v-card-text>
-                <div>Web apps, desktop apps and others built with Microsoft Technologies</div>
+              <v-card-title class="pb-0">{{stack.title}}</v-card-title>
+              <v-card-text class="card-text">
+                <div>{{stack.text}}</div>
               </v-card-text>
               <v-card-actions>
                 <v-btn
+                  to="/creations"
                   color="primary"
                   text
                 >
@@ -270,63 +189,7 @@
               </v-card-actions>
             </v-card>
           </v-col>
-          <v-col cols="3">
-            <v-card class="height-430">
-              <v-container style="height: 265px;">
-                <v-img src="vue-js-1.svg" class="vue-img"></v-img>
-              </v-container>
-              <v-card-subtitle class="pb-0">Vue JS</v-card-subtitle>
-              <v-card-text>
-                <div>We build the UI that makes your business stand out</div>
-              </v-card-text>
-              <v-card-actions>
-                <v-btn
-                  color="primary"
-                  text
-                >
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          <v-col cols="3">
-            <v-card class="height-430">
-              <v-container>
-                <v-img src="python-logo.svg"></v-img>
-              </v-container>
-              <v-card-subtitle class="pb-0">Python</v-card-subtitle>
-              <v-card-text>
-                <div>Web apps, desktop apps and others built with Microsoft Technologies</div>
-              </v-card-text>
-              <v-card-actions>
-                <v-btn
-                  color="primary"
-                  text
-                >
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
-          <v-col cols="3">
-            <v-card class="height-430">
-              <v-container>
-                <v-img src="/c--4.svg"></v-img>
-              </v-container>
-              <v-card-subtitle class="pb-0">C#</v-card-subtitle>
-              <v-card-text>
-                <div>Web apps, desktop apps and others built with Microsoft Technologies</div>
-              </v-card-text>
-              <v-card-actions>
-                <v-btn
-                  color="primary"
-                  text
-                >
-                  Explore
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-col>
+
         </v-row>
       </v-container>
     </v-container>
@@ -453,7 +316,7 @@
             </v-card-title>
             <v-card-text>
               <v-row v-if="githubEventData.length > 0">
-                <v-col cols="12" v-for="x in 3" key="x">
+                <v-col cols="12" v-for="x in 3" :key="x">
                   <div>
                     Type: {{githubEventData[x-1].type}}
                   </div>
@@ -496,7 +359,69 @@
       return {
         title: "C. Chris | Portfolio",
         githubData: {},
-        githubEventData: []
+        githubEventData: [],
+        services: [
+          {
+            id: "service1",
+            image: "/webdevelopment.jpg",
+            title: "Web development",
+            text: "Be amazed with what we have to offer. End to end solution, " +
+              "we take your business from an idea to a real app in production.",
+            link: ""
+          },
+          {
+            id: "service2",
+            image: "/desktopdev.jpg",
+            title: "Desktop development",
+            text: "We build the desktop apps your business needs.",
+            link: ""
+          },
+          {
+            id: "service3",
+            image: "/white-iphone-xr.jpg",
+            title: "iOS development",
+            text: "Robust and scalable.We prototype beforehand, you either like it or you don't owe us.",
+            link: ""
+          },
+          {
+            id: "service4",
+            image: "/android-android-phone-cel.jpg",
+            title: "Android development",
+            text: "We build native android applications for mobiles Build your android solution with us. " +
+              "We prototype, you either like or you don't pay.",
+            link: ""
+          }
+        ],
+        stacks: [
+          {
+            id: "stack_1",
+            image: "/laravel-2.svg",
+            title: "Laravel",
+            text: "Thanks to this wonderful web framework we can build robust and scalable web apps",
+            "link": ""
+          },
+          {
+            id: "stack_2",
+            image: "/vue-js-1.svg",
+            title: "Vue JS",
+            text: "We build the UI that makes your business stand out",
+            "link": ""
+          },
+          {
+            id: "stack_3",
+            image: "/python-logo.svg",
+            title: "Python",
+            text: "Artificial Intelligence and Machine Learning capabilities plugged into your web apps",
+            "link": ""
+          },
+          {
+            id: "stack_4",
+            image: "/c--4.svg",
+            title: "C#",
+            text: "Web, desktop, mobile apps and others built with Microsoft Technologies.",
+            "link": ""
+          }
+        ]
       }
     },
     async created() {
@@ -528,9 +453,34 @@
   }
 </script>
 <style>
+  .card-services-height {
+    height: 500px;
+  }
+
+  .card-services-img {
+    height: 270px;
+  }
+
+  .card-services-text {
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+
   .icon-pos {
     position: relative;
     top: -37px;
+  }
+
+  .card-img {
+    height: 255px;
+    overflow: hidden;
+  }
+
+  .card-text {
+    display: flex;
+    align-items: center;
+    height: 100px;
   }
 
   .card-tile-height {
@@ -541,8 +491,8 @@
     text-decoration: none;
   }
 
-  .height-430 {
-    height: 430px;
+  .card-height {
+    height: 460px;
   }
 
   .font-34 {
