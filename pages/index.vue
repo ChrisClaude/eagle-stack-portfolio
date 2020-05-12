@@ -190,7 +190,7 @@
       </v-row>
       <v-row>
         <!--  LinkedIn  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="8" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.linkedin.com/in/claude-de-tchambila-a720ba143/" target="_blank">
@@ -209,7 +209,7 @@
           </v-card>
         </v-col>
         <!--  Github  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="8" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://github.com/ChCLaude" target="_blank">
@@ -228,7 +228,7 @@
           </v-card>
         </v-col>
         <!--  Twitter  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="8" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://twitter.com/ClaudeChrist_DT" target="_blank">
@@ -247,7 +247,7 @@
           </v-card>
         </v-col>
         <!--  Instagram  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="8" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.instagram.com/christ_tchambila/" target="_blank">
