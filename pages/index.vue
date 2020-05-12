@@ -157,8 +157,8 @@
 
         <v-row>
           <v-col v-for="stack in stacks" sm="12" md="3" :key="stack.id">
-            <v-card class="card-height">
-              <v-container class="card-img">
+            <v-card class="card-stack-height">
+              <v-container class="card-stack-img">
                 <v-img :src="stack.image"></v-img>
               </v-container>
               <v-card-title class="pb-0">{{stack.title}}</v-card-title>
@@ -188,9 +188,9 @@
           <h2>Social Media</h2>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row class="social-med-row">
         <!--  LinkedIn  -->
-        <v-col sm="8" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.linkedin.com/in/claude-de-tchambila-a720ba143/" target="_blank">
@@ -209,7 +209,7 @@
           </v-card>
         </v-col>
         <!--  Github  -->
-        <v-col sm="8" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://github.com/ChCLaude" target="_blank">
@@ -228,7 +228,7 @@
           </v-card>
         </v-col>
         <!--  Twitter  -->
-        <v-col sm="8" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://twitter.com/ClaudeChrist_DT" target="_blank">
@@ -247,7 +247,7 @@
           </v-card>
         </v-col>
         <!--  Instagram  -->
-        <v-col sm="8" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.instagram.com/christ_tchambila/" target="_blank">
@@ -459,7 +459,7 @@
     top: -37px;
   }
 
-  .card-img {
+  .card-stack-img {
     height: 255px;
     overflow: hidden;
   }
@@ -478,7 +478,7 @@
     text-decoration: none;
   }
 
-  .card-height {
+  .card-stack-height {
     height: 460px;
   }
 
@@ -497,19 +497,18 @@
     background-color: #fc4364;
   }
 
-  .android-card {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-  }
+  @media only screen and (max-width: 600px) {
+    .social-med-row {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
 
-  .vue-img {
-    position: relative;
-    top: 25px;
-  }
+    .card-stack-img {
+      height: 285px;
+    }
 
-  .rt-80 {
-    position: relative;
-    top: -80px;
+    .card-stack-height {
+      height: 490px;
+    }
   }
 </style>
