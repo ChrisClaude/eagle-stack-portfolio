@@ -228,7 +228,7 @@
           </v-card>
         </v-col>
         <!--  Twitter  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3 mb-2">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://twitter.com/ClaudeChrist_DT" target="_blank">
@@ -247,7 +247,7 @@
           </v-card>
         </v-col>
         <!--  Instagram  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3 mb-2">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.instagram.com/christ_tchambila/" target="_blank">
