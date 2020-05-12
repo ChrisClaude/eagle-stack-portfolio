@@ -190,7 +190,7 @@
       </v-row>
       <v-row class="social-med-row">
         <!--  LinkedIn  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3 mb-2">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://www.linkedin.com/in/claude-de-tchambila-a720ba143/" target="_blank">
@@ -209,7 +209,7 @@
           </v-card>
         </v-col>
         <!--  Github  -->
-        <v-col sm="6" md="3" class="mt-3">
+        <v-col sm="6" md="3" class="mt-3 mb-2">
           <v-card>
             <v-card-title class="card-tile-height">
               <a href="https://github.com/ChCLaude" target="_blank">
@@ -512,7 +512,7 @@
     }
 
     .icon-pos {
-      top: -27px;
+      top: -22px;
     }
   }
 </style>
