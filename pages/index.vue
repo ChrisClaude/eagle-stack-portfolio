@@ -156,7 +156,7 @@
         </v-row>
 
         <v-row>
-          <v-col v-for="stack in stacks" sm="12" md="3" :key="stack.id">
+          <v-col v-for="stack in stacks" sm="6" md="3" :key="stack.id">
             <v-card class="card-stack-height">
               <v-container class="card-stack-img">
                 <v-img :src="stack.image"></v-img>

@@ -134,8 +134,8 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Skills',
-          to: '/skills'
+          title: 'Inspire',
+          to: '/inspire'
         },
         {
           icon: 'mdi-card-account-mail',
