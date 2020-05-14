@@ -10,7 +10,7 @@
       <div class="my-2 mr-4" :class="`d-flex justify-center`">
         <v-avatar size="85">
           <v-img
-            src="/mypic.jpeg"
+            src="https://res.cloudinary.com/lulendo-technologies/image/upload/v1589489263/eagle-stack/mypic_wv7dl2.jpg"
             lazy-src="https://picsum.photos/10/6?image=10"
           >
             <template v-slot:placeholder>

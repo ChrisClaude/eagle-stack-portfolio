@@ -17,7 +17,7 @@
           class="fill-height"
         >
           <v-img
-            src="/city_entreprise.jpg"
+            src="https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488347/eagle-stack/city_entreprise_ish4tn.jpg"
             lazy-src="/city_entreprise.jpg"
             class="d-flex justify-end align-center">
                   <div class="display-3 white--text d-flex justify-center pl-5">Welcome <br/>to Chris Software development World</div>
@@ -39,7 +39,7 @@
           class="fill-height"
         >
           <v-img
-            src="/software_dev.jpg"
+            src="https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488332/eagle-stack/software_dev_fevhhz.jpg"
             lazy-src="/city_entreprise.jpg"
             class="d-flex justify-end align-center">
             <div class="white--text pr-6" style="display: grid; grid-template-columns: auto;">
@@ -72,7 +72,7 @@
           justify="center"
         >
           <v-img
-            src="/silver-and-black-laptop-computer.jpg"
+            src="https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488358/eagle-stack/silver-and-black-laptop-computer_pqfr2b.jpg"
             lazy-src="/city_entreprise.jpg"
             class="d-flex align-center">
             <v-container class="white--text">
@@ -350,7 +350,7 @@
         services: [
           {
             id: "service1",
-            image: "/webdevelopment.jpg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488193/eagle-stack/services/webdevelopment_kt7mtc.jpg",
             title: "Web development",
             text: "Be amazed with what we have to offer. End to end solution, " +
               "we take your business from an idea to a real app in production.",
@@ -358,21 +358,21 @@
           },
           {
             id: "service2",
-            image: "/desktopdev.jpg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488218/eagle-stack/services/desktopdev_mxa7jm.jpg",
             title: "Desktop development",
             text: "We build the desktop apps your business needs.",
             link: ""
           },
           {
             id: "service3",
-            image: "/white-iphone-xr.jpg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488205/eagle-stack/services/white-iphone-xr_frehg6.jpg",
             title: "iOS development",
             text: "Robust and scalable.We prototype beforehand, you either like it or you don't owe us.",
             link: ""
           },
           {
             id: "service4",
-            image: "/android-android-phone-cel.jpg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488214/eagle-stack/services/android-android-phone-cel_l5dgnq.jpg",
             title: "Android development",
             text: "We build native android applications for mobiles Build your android solution with us. " +
               "We prototype, you either like or you don't pay.",
@@ -382,28 +382,28 @@
         stacks: [
           {
             id: "stack_1",
-            image: "/laravel-2.svg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488048/eagle-stack/stack/laravel-2_a7t8cn.svg",
             title: "Laravel",
             text: "Thanks to this wonderful web framework we can build robust and scalable web apps",
             "link": ""
           },
           {
             id: "stack_2",
-            image: "/vue-js-1.svg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488048/eagle-stack/stack/vue-js-1_mbtxhe.svg",
             title: "Vue JS",
             text: "We build the UI that makes your business stand out",
             "link": ""
           },
           {
             id: "stack_3",
-            image: "/python-logo.svg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488048/eagle-stack/stack/python-logo_usfbsv.svg",
             title: "Python",
             text: "Artificial Intelligence and Machine Learning capabilities plugged into your web apps",
             "link": ""
           },
           {
             id: "stack_4",
-            image: "/c--4.svg",
+            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488048/eagle-stack/stack/c--4_p45cyn.svg",
             title: "C#",
             text: "Web, desktop, mobile apps and others built with Microsoft Technologies.",
             "link": ""

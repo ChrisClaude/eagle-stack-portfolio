@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex class="text-center">
       <img
-        src="/v.png"
+        src="https://res.cloudinary.com/lulendo-technologies/image/upload/v1589488298/eagle-stack/vuetify-logo_n6o1du.svg"
         alt="Vuetify.js"
         class="mb-5"
       >
