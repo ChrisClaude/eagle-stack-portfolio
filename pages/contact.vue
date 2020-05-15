@@ -35,7 +35,15 @@
             </v-tooltip>
           </v-toolbar>
           <v-card-text>
-            <v-form>
+            <v-form
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              @submit="onSubmit"
+              id="message-form"
+              name="message-form"
+            >
+              <input type="hidden" name="form-name" value="send-message" />
               <v-text-field
                 label="Name"
                 name="name"
@@ -46,7 +54,7 @@
               ></v-text-field>
 
               <v-text-field
-                id="password"
+                id="email"
                 label="Email"
                 name="email"
                 prepend-icon="mdi-lock"
@@ -66,6 +74,7 @@
 
               <v-textarea
                 label="Message"
+                name="message"
                 prepend-icon="mdi-message-reply-text"
                 rows="2"
                 v-model="message"
@@ -76,7 +85,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="primary" @click="sendMessage">Send</v-btn>
+            <v-btn color="primary" type="submit" form="message-form">Send</v-btn>
           </v-card-actions>
 
       <!--    Snackbar      -->
@@ -107,6 +116,8 @@
 </template>
 
 <script>
+  import axios from "axios";
+
   export default {
     data() {
       return {
@@ -127,7 +138,15 @@
       }
     },
     methods: {
-      sendMessage() {
+      encode (data) {
+        return Object.keys(data)
+          .map(
+            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          )
+          .join("&");
+      },
+      onSubmit(e) {
+        e.preventDefault();
 
         if (this.name !== "" && this.email !== "" && this.messageHeader !== "" && this.message !== "") {
           const sentMessage = {
@@ -135,20 +154,39 @@
             "email": this.email,
             "title": this.messageHeader,
             "message": this.message
-          }
-          console.log(sentMessage);
-          this.name = "";
-          this.email = "";
-          this.messageHeader = "";
-          this.message = "";
-          this.snackbarData.color = "success";
-          this.snackbarData.text = "Your message was sent";
+          };
+
+          const axiosConfig = {
+            header: { "Content-Type": "application/x-www-form-urlencoded" }
+          };
+
+          axios.post("/",this.encode({
+              "form-name": "message-form",
+              ...sentMessage
+            }),
+            axiosConfig
+          ).then(() => {
+            // console.log(sentMessage);
+            this.name = "";
+            this.email = "";
+            this.messageHeader = "";
+            this.message = "";
+            this.snackbarData.color = "success";
+            this.snackbarData.text = "Your message was sent";
+            this.snackbarData.snackbar = true;
+          }).catch(err => {
+            console.error(err);
+            this.snackbarData.color = "error";
+            this.snackbarData.text = "An error occurred, Please try again";
+            this.snackbarData.snackbar = true;
+          });
+
         } else {
           this.snackbarData.color = "error";
           this.snackbarData.text = "An error occurred, Make sure you fill in all fields";
+          this.snackbarData.snackbar = true;
         }
 
-        this.snackbarData.snackbar = true;
       }
     },
     head() {
