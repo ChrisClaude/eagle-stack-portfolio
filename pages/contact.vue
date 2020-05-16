@@ -46,10 +46,10 @@
               <input type="hidden" name="form-name" value="message-form" />
               <v-text-field
                 label="Name"
-                name="name"
+                name="author"
                 prepend-icon="mdi-account"
                 type="text"
-                v-model="name"
+                v-model="author"
                 required
               ></v-text-field>
 
@@ -122,7 +122,7 @@
     data() {
       return {
         title: "C. Chris | Contact",
-        name: "",
+        author: "",
         email: "",
         messageHeader: "",
         message: "",
@@ -148,11 +148,11 @@
       onSubmit(e) {
         e.preventDefault();
 
-        if (this.name !== "" && this.email !== "" && this.messageHeader !== "" && this.message !== "") {
+        if (this.author !== "" && this.email !== "" && this.messageHeader !== "" && this.message !== "") {
           const sentMessage = {
-            "author": this.name,
+            "author": this.author,
             "email": this.email,
-            "title": this.messageHeader,
+            "header": this.messageHeader,
             "message": this.message
           };
 
@@ -167,7 +167,7 @@
             axiosConfig
           ).then(() => {
             // console.log(sentMessage);
-            this.name = "";
+            this.author = "";
             this.email = "";
             this.messageHeader = "";
             this.message = "";
