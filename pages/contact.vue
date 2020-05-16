@@ -43,7 +43,7 @@
               id="message-form"
               name="message-form"
             >
-              <input type="hidden" name="form-name" value="send-message" />
+              <input type="hidden" name="form-name" value="message-form" />
               <v-text-field
                 label="Name"
                 name="name"
