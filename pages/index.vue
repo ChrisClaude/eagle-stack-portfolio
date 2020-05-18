@@ -47,7 +47,7 @@
                 Want to hire me or collaborate?
               </blockquote>
               <div>
-                <v-btn class="primary" style="float: right;">
+                <v-btn to="/contact" class="primary" style="float: right;">
                   Contact me
                 </v-btn>
               </div>
@@ -82,7 +82,7 @@
                     Be amazed by my work
                   </v-row>
                   <v-row class="mt-3">
-                    <v-btn class="primary">Explore</v-btn>
+                    <v-btn class="primary" to="/creations">Explore</v-btn>
                   </v-row>
                 </v-col>
               </v-row>
