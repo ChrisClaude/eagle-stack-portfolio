@@ -65,48 +65,48 @@
           {
             title: "Flight Booking",
             text: "Book a flight with eagle airlines",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487936/eagle-stack/projects-img/eagle_airlines_ddw1kg.png",
+            image: "/projects/eagle_airlines.png",
             link: "https://stark-waters-39409.herokuapp.com/",
             repo: "https://github.com/ChClaude/eagle-airlines"
           },{
             title: "Movie Streamer",
             text: "Find and stream movie, built with React JS",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487966/eagle-stack/projects-img/hubstack_stream_vr9z6v.png",
+            image: "/projects/hubstack_stream.png",
             link: "https://claude-ns.netlify.app",
             repo: "https://github.com/ChClaude/hubstuck-stram"
           },
           {
             title: "Github Finder",
             text: "Single Page github finder app, interact with the github API and find almost anything around github users",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487936/eagle-stack/projects-img/github_finder_jqmdop.png",
+            image: "/projects/github_finder.png",
             link: "https://githubfinder-c.netlify.app",
             repo: "https://github.com/ChClaude/github-finder-m"
           },
           {
             title: "EagleStack",
             text: "This is my portfolio site - I named it Eagle Stack",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487964/eagle-stack/projects-img/eagle_stack_nt38nq.png",
+            image: "/projects/eagle_stack.png",
             link: "https://cchris.netlify.app",
             repo: "https://github.com/ChClaude/eagle-stack-portfolio"
           },
           {
             title: "Joky Jokes",
             text: "Site for jokes, this is a site I built while getting to know the Nuxt JS framework",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487936/eagle-stack/projects-img/dad_jokes_dxqa66.png",
+            image: "/projects/dad_jokes.png",
             link: "https://nuxt-jokes.netlify.app",
             repo: "https://github.com/ChClaude/nuxtjs-dad-jokes"
           },
           {
             title: "Portfolio Site",
             text: "This was my previous portfolio site",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487974/eagle-stack/projects-img/lulendo_site_qcjelf.png",
+            image: "/projects/lulendo_site.png",
             link: "https://lulendo-chclaude.netlify.app",
             repo: "https://github.com/ChClaude/lulendo-claude-portfolio"
           },
           {
             title: "Phono Site",
             text: "This is a static site, just for display, phono site",
-            image: "https://res.cloudinary.com/lulendo-technologies/image/upload/v1589487943/eagle-stack/projects-img/phono_site_cax4zv.png",
+            image: "/projects/phono_site.png",
             link: "https://claude-phono-website.netlify.app",
             repo: "https://github.com/ChClaude/phono-website"
           }
