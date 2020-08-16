@@ -20,7 +20,7 @@
             src="/city_entreprise.jpg"
             lazy-src="/city_entreprise.jpg"
             class="d-flex justify-end align-center">
-                  <div class="display-3 white--text d-flex justify-center pl-5">Welcome <br/>to Chris Software development World</div>
+                  <div class="display-3 white--text d-flex justify-center pl-5">Welcome to the best<br/>software developer site in Cape Town</div>
           </v-img>
           <template v-slot:placeholder>
             <v-row
@@ -44,7 +44,7 @@
             class="d-flex justify-end align-center">
             <div class="white--text pr-6" style="display: grid; grid-template-columns: auto;">
               <blockquote class="blockquote" style="text-align: right;">
-                Want to hire me or collaborate?
+                Want to hire a software developer in Cape Town?
               </blockquote>
               <div>
                 <v-btn to="/contact" class="primary" style="float: right;">

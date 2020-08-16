@@ -64,10 +64,10 @@
         projects: [
           {
             title: "Flight Booking",
-            text: "Book a flight with eagle airlines",
-            image: "/projects/eagle_airlines.png",
-            link: "https://stark-waters-39409.herokuapp.com/",
-            repo: "https://github.com/ChClaude/eagle-airlines"
+            text: "This is a full stack flight booking app built with React JS and ASP.NET Core Web API.",
+            image: "/projects/eagleairlines.png",
+            link: "https://eagleairlines.netlify.app/",
+            repo: "https://github.com/ChClaude/EagleAirlines"
           },{
             title: "Movie Streamer",
             text: "Find and stream movie, built with React JS",
